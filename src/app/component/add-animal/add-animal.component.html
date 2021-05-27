@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+        <section>
+            <h1>Add New Animal</h1>
+            <form [formGroup]="addAnimal" (ngSubmit)="addAnimalSubmit()">
+                <div class="form-group">
+                    <label class="titles">Name<span class="mandat error">*</span></label>
+                    <input type="text" class="form-control" [ngClass]="{
+                        'has-danger': name.invalid && name.dirty,
+                        'has-success': name.valid && name.dirty
+                        }" formControlName="name">
+                </div>
+                <div *ngIf="name.errors && (name.dirty || name.touched)">
+                    <p *ngIf="name.errors.required" class="error">Name is
+                        required</p>
+                    <p *ngIf="name.errors.invalid" class="error">Name is invalid</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="titles">Animal Type<span class="mandat error">*</span></label>
+                    <input type="text" class="form-control" [ngClass]="{
+                        'has-danger': type.invalid && type.dirty,
+                        'has-success': type.valid && type.dirty
+                        }" formControlName="type">
+                </div>
+                <div *ngIf="type.errors && (type.dirty || type.touched)">
+                    <p *ngIf="type.errors.required" class="error">Animal Type is
+                        required</p>
+                    <p *ngIf="type.errors.invalid" class="error">Animal Type is
+                        invalid</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="titles">Pen ID:<span class="mandat error">*</span></label>
+                    <br/>
+                        <select class="select-drop" (change)="selectPID($event)"
+                            formControlName="penId">
+                            <option value="" disabled>Please select Pen ID</option>
+                            <ng-container *ngIf="penIds && penIds.length> 0">
+                                <option *ngFor="let id of penIds"
+                                    [ngValue]="id.id">{{id.id | json}}</option>
+                            </ng-container>
+                        </select>
+                    </div>
+                    <div *ngIf="penId.errors && (penId.dirty || penId.touched)">
+                        <p *ngIf="penId.errors.required" class="error">Pen Id is
+                            required</p>
+                        <p *ngIf="penId.errors.invalid" class="error">Pen Id is
+                            invalid</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="titles">Area Id<span
+                                class="mandat error">*</span></label>
+                        <input type="number" class="form-control" [ngClass]="{
+                            'has-danger': areaId.invalid && areaId.dirty,
+                            'has-success': areaId.valid && areaId.dirty
+                            }" formControlName="areaId">
+                    </div>
+                    <div *ngIf="areaId.errors && (areaId.dirty ||
+                        areaId.touched)">
+                        <p *ngIf="areaId.errors.required" class="error">
+                            AreaId is required</p>
+                        <p *ngIf="areaId.errors.invalid" class="error">
+                            AreaId is invalid</p>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label class="titles">Custom Attribute<span
+                                class="mandat error">*</span></label>
+                        <input type="text" class="form-control" [ngClass]="{
+                            'has-danger': attribute.invalid && attribute.dirty,
+                            'has-success': attribute.valid && attribute.dirty
+                            }" formControlName="attribute">
+                    </div>
+                    <div *ngIf="attribute.errors && (attribute.dirty ||
+                        attribute.touched)">
+                        <p *ngIf="attribute.errors.required" class="error">Custom
+                            Attribute is required</p>
+                        <p *ngIf="attribute.errors.invalid" class="error">Custom
+                            Attribute is invalid</p>
+                    </div> -->
+                    <button type="submit" class="button"
+                        [disabled]="addAnimal.invalid">Add</button>
+                    <button type="button" routerLink="/" class="button m-l-2 back">Back</button>
+                </form>
+            </section>
+        </div>
+    </div>

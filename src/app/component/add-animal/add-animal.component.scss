@@ -1,0 +1,18 @@
+
+.error{
+    color: red;
+}
+section{
+    width: 40%;
+    margin: 0 auto;
+    label{
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    button{
+        margin: 30px 0;
+        &.back{
+            margin-left: 20px;
+        }
+    }
+}

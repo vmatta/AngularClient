@@ -1,0 +1,126 @@
+{
+    "availablePens": [
+        {
+            "id": 7,
+            "status": false,
+            "areaName": "area_2",
+            "areaId": 2
+        },
+        {
+            "id": 8,
+            "status": false,
+            "areaName": "area_2",
+            "areaId": 2
+        },
+        {
+            "id": 9,
+            "status": false,
+            "areaName": "area_3",
+            "areaId": 3
+        },
+        {
+            "id": 10,
+            "status": false,
+            "areaName": "area_3",
+            "areaId": 3
+        },
+        {
+            "id": 11,
+            "status": false,
+            "areaName": "area_3",
+            "areaId": 3
+        },
+        {
+            "id": 12,
+            "status": false,
+            "areaName": "area_3",
+            "areaId": 3
+        },
+        {
+            "id": 13,
+            "status": false,
+            "areaName": "area_4",
+            "areaId": 4
+        },
+        {
+            "id": 14,
+            "status": false,
+            "areaName": "area_4",
+            "areaId": 4
+        },
+        {
+            "id": 15,
+            "status": false,
+            "areaName": "area_4",
+            "areaId": 4
+        },
+        {
+            "id": 16,
+            "status": false,
+            "areaName": "area_4",
+            "areaId": 4
+        }
+    ],
+    "allAnimals": [
+        {
+            "id": 1,
+            "name": "Lion",
+            "type": "Mammals",
+            "areaName": "area_1",
+            "areaId": 1,
+            "penId": 1,
+            "customAttribute": null,
+            "canFly": false
+        },
+        {
+            "id": 2,
+            "name": "Tiger",
+            "type": "Mammals",
+            "areaName": "area_1",
+            "areaId": 1,
+            "penId": 2,
+            "customAttribute": null,
+            "canFly": false
+        },
+        {
+            "id": 3,
+            "name": "Bears",
+            "type": "Mammals",
+            "areaName": "area_1",
+            "areaId": 1,
+            "penId": 3,
+            "customAttribute": null,
+            "canFly": false
+        },
+        {
+            "id": 4,
+            "name": "Snakes",
+            "type": "Reptiles",
+            "areaName": "area_1",
+            "areaId": 1,
+            "penId": 4,
+            "customAttribute": null,
+            "canFly": false
+        },
+        {
+            "id": 5,
+            "name": "Ostriches",
+            "type": "Birds",
+            "areaName": "area_2",
+            "areaId": 2,
+            "penId": 5,
+            "customAttribute": null,
+            "canFly": false
+        },
+        {
+            "id": 6,
+            "name": "Eagles",
+            "type": "Birds",
+            "areaName": "area_2",
+            "areaId": 2,
+            "penId": 6,
+            "customAttribute": null,
+            "canFly": true
+        }
+    ]
+}

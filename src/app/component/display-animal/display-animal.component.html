@@ -1,0 +1,35 @@
+<section>
+    <h2>
+        Total number of animals in the zoo: {{animalCount}}
+    </h2>
+    <button (click)="navigateTo()">Add Animal</button>
+    <button (click)="loadAppData()" style="margin-left: 10px;">Reload Data</button>
+    <div class="filter_component">
+        <app-filter-animal (filteredDataObj)='filterOutput($event)'></app-filter-animal>
+    </div>
+    <div class="table">
+        <table>
+            <tbody>
+                <ng-container *ngIf="animalData else noDataMsg">
+                    <tr>
+                        <th *ngFor="let k of headerKey">
+                            {{k}}
+                        </th>
+                    </tr>
+                    <tr *ngFor="let data of animalData; let i= index;">
+                        <td *ngFor="let key of headerKey">
+                            {{data[key]}}
+                        </td>
+                    </tr>
+                </ng-container>
+                <ng-template #noDataMsg>
+                    <tr *ngFor="let data of animalData; let i= index;">
+                        <td>
+                            {{noDataMsg}}
+                        </td>
+                    </tr>
+                </ng-template>
+            </tbody>
+        </table>
+    </div>
+</section>

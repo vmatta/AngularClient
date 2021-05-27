@@ -1,0 +1,31 @@
+<div class="container p-0">
+    <div class="row">
+        <h4>Filter Animal</h4>
+        <form [formGroup]="filterForm" (ngSubmit)="filterAnimal()">
+            <div class="container p-0">
+                <div class="form-group col-sm-3">
+                    <label class="titles">Pen ID:</label>
+                    <input type="number" class="form-control" [ngClass]="{
+                        'has-danger': penid.invalid && penid.dirty,
+                        'has-success': penid.valid && penid.dirty
+                        }" formControlName="penid">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label class="titles">Area ID:</label>
+                    <input type="number" class="form-control" [ngClass]="{
+                        'has-danger': areaId.invalid && areaId.dirty,
+                        'has-success': areaId.valid && areaId.dirty
+                        }" formControlName="areaId">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label class="titles">Animal Type:</label>
+                    <input type="text" class="form-control" [ngClass]="{
+                        'has-danger': type.invalid && type.dirty,
+                        'has-success': type.valid && type.dirty
+                        }" formControlName="type">
+                </div>
+                <button type="submit" class="button">Filter</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+::ng-deep{
+    .form-control{
+        border: 1px solid;
+        &:focus{
+            border: 1px solid;
+            box-shadow: none;
+        }
+    }
+}
